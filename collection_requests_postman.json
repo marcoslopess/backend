@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "0514f250-3ed6-4c3a-b48a-2060891c95bc",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "criar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Marcos Lopes\",\r\n    \"senha\": \"123456789\",\r\n    \"email\": \"marcos@marcos.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8198/api/usuario/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"usuario",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senha\": \"123456789\",\r\n    \"email\": \"marcos@marcos.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8198/api/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "criar cliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVjMzE4YzdjZWNkMDU2YzJmNjJkMCIsImlhdCI6MTYxNjgyNTE5MywiZXhwIjoxNjE2OTExNTkzfQ.ZbTFLOhpFY-G47nxCzIPfQoGudVnR38tZx5InlL3r30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Marcos Lopes\",\r\n    \"senha\": \"123456789\",\r\n    \"email\": \"marco0s@marcos.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8198/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVjMzE4YzdjZWNkMDU2YzJmNjJkMCIsImlhdCI6MTYxNjgyNTE5MywiZXhwIjoxNjE2OTExNTkzfQ.ZbTFLOhpFY-G47nxCzIPfQoGudVnR38tZx5InlL3r30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"605ebb3f0434e5305c835f8a\",\r\n    \"data\": {\r\n        \"nome\": \"Marcos Lopes\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8198/api/cliente/605ebb3f0434e5305c835f8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"cliente",
+								"605ebb3f0434e5305c835f8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar todos clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVjMzE4YzdjZWNkMDU2YzJmNjJkMCIsImlhdCI6MTYxNjgyNTE5MywiZXhwIjoxNjE2OTExNTkzfQ.ZbTFLOhpFY-G47nxCzIPfQoGudVnR38tZx5InlL3r30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8198/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar um cliente por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVjMzE4YzdjZWNkMDU2YzJmNjJkMCIsImlhdCI6MTYxNjgyNTE5MywiZXhwIjoxNjE2OTExNTkzfQ.ZbTFLOhpFY-G47nxCzIPfQoGudVnR38tZx5InlL3r30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8198/api/cliente/605ebb3f0434e5305c835f8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"cliente",
+								"605ebb3f0434e5305c835f8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar cliente por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVjMzE4YzdjZWNkMDU2YzJmNjJkMCIsImlhdCI6MTYxNjgyNTE5MywiZXhwIjoxNjE2OTExNTkzfQ.ZbTFLOhpFY-G47nxCzIPfQoGudVnR38tZx5InlL3r30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8198/api/cliente/605ed4ebd8e7863bfc337ef4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8198",
+							"path": [
+								"api",
+								"cliente",
+								"605ed4ebd8e7863bfc337ef4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
